@@ -35,5 +35,8 @@
     "format:write": "./node_modules/.bin/prettier . --write",
     "test": "jest"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "3": "^2.1.0"
+  }
 }
