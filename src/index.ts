@@ -75,7 +75,6 @@ export function normalizeVariable(event: Events, message: string) {
     case ACTION_THROW:
       throw new Error(message);
     case ACTION_WARN:
-      // TODO make this plugable
       configuration.get("logger")(message);
       break;
     case ACTION_NULL:
@@ -94,13 +93,13 @@ export const env = new Proxy(process.env, {
     ) {
       return normalizeVariable(
         "onMissing",
-        `The environment variable "${name}" is required!`
+        `The environment variable "${name}" is required!`,
       );
     }
     if (typeof value === "string" && !value.length) {
       return normalizeVariable(
         "onEmpty",
-        `The environment variable "${name}" is empty!`
+        `The environment variable "${name}" is empty!`,
       );
     }
     return value;

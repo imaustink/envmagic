@@ -1,7 +1,7 @@
 {
   "name": "envmagic",
   "description": "A smarter way of managing environment variables",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Austin Kurpuis <austin@austinkurpuis.com> (https://www.austinkurpuis.com/)",
   "bugs": {
     "url": "https://github.com/imaustink/envmagic/issues"

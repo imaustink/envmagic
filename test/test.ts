@@ -8,7 +8,7 @@ describe("magicenv", () => {
       expect(() => {
         env.MISSING;
       }).toThrowError(
-        new Error('The environment variable "MISSING" is required!')
+        new Error('The environment variable "MISSING" is required!'),
       );
     });
     test("should warn onEmpty", () => {
@@ -30,7 +30,7 @@ describe("magicenv", () => {
       expect(() => {
         env.MISSING;
       }).toThrowError(
-        new Error('The environment variable "MISSING" is required!')
+        new Error('The environment variable "MISSING" is required!'),
       );
     });
     test("should error onEmpty", () => {
@@ -47,13 +47,13 @@ describe("magicenv", () => {
     test("should warn onMissing", () => {
       env.MISSING;
       expect(console.warn).toHaveBeenCalledWith(
-        'The environment variable "MISSING" is required!'
+        'The environment variable "MISSING" is required!',
       );
     });
     test("should warn onEmpty", () => {
       env.EMPTY;
       expect(console.warn).toHaveBeenCalledWith(
-        'The environment variable "EMPTY" is empty!'
+        'The environment variable "EMPTY" is empty!',
       );
     });
   });
